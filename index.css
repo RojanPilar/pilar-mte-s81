@@ -122,6 +122,20 @@ button { cursor:pointer; border:none; background:none; }
 }
 
 /* ── 5. NAVBAR ──────────────────────────────────────────────── */
+
+/* Neutralise Bootstrap .navbar defaults so they don't bleed into our design.
+   Bootstrap forces display:flex on <nav class="navbar">, which hijacks our
+   rjn-nav-inner as a flex child and breaks the centered-links layout.
+   Resetting to display:block hands full control back to rjn-nav-inner. */
+.rjn-navbar.navbar {
+  display: block;
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+
 .rjn-navbar {
   background:      rgba(242,242,242,0.9);
   backdrop-filter: blur(20px);
@@ -566,6 +580,19 @@ button { cursor:pointer; border:none; background:none; }
   gap:        1.25rem;
   transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
   will-change: transform;
+}
+
+/* Neutralise Bootstrap .card defaults */
+.blog-card.card,
+.inventory-card.card {
+  --bs-card-spacer-y: 0;
+  --bs-card-spacer-x: 0;
+  --bs-card-border-width: 0;
+  --bs-card-border-radius: 0;
+  --bs-card-bg: transparent;
+  border: none;
+  border-radius: 0;
+  color: inherit;
 }
 
 /* Blog card */
