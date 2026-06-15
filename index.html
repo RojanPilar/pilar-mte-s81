@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RJN Automotive Group — Drive the Unattainable</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="rjn-navbar sticky-top" id="mainNav">
+    <div class="rjn-nav-inner">
+      <a class="rjn-brand" href="#">RJN&nbsp;AUTOMOTIVE</a>
+
+      <!-- Desktop nav links (center) -->
+      <ul class="rjn-nav-links">
+        <li><a class="rjn-link active" href="#">Home</a></li>
+        <li><a class="rjn-link" href="#">Shop</a></li>
+        <li><a class="rjn-link" href="#">About</a></li>
+        <li><a class="rjn-link" href="#">Contact</a></li>
+      </ul>
+
+      <!-- Desktop right actions -->
+      <div class="rjn-nav-actions">
+        <button class="nav-icon-btn" id="searchToggleDesktop" aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="nav-icon-btn nav-cart-btn" aria-label="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <a href="#" class="rjn-btn-primary">Log in <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+
+      <!-- Mobile: only hamburger (icons hidden on very small) -->
+      <div class="rjn-nav-mobile">
+        <button class="nav-icon-btn" id="searchToggleMobile" aria-label="Search">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="nav-icon-btn nav-cart-btn" aria-label="Cart">
+          <i class="bi bi-bag"></i>
+          <span class="cart-badge">0</span>
+        </button>
+        <button class="nav-hamburger" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="rjn-mobile-drawer" id="mobileMenu" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#" class="mobile-nav-link active">Home</a></li>
+        <li><a href="#" class="mobile-nav-link">Shop</a></li>
+        <li><a href="#" class="mobile-nav-link">About</a></li>
+        <li><a href="#" class="mobile-nav-link">Contact</a></li>
+        <li><a href="#" class="mobile-nav-link">Blog</a></li>
+        <li><a href="#" class="mobile-nav-link">Trade-In</a></li>
+        <li><a href="#" class="mobile-nav-link">Financing</a></li>
+      </ul>
+      <a href="#" class="rjn-btn-primary mt-4 align-self-start">Log in <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+  </nav>
+
+  <!-- Search overlay -->
+  <div class="rjn-search-bar" id="searchBar">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="rjn-search-inner">
+        <i class="bi bi-search search-icon-left"></i>
+        <input type="text" class="rjn-search-input" placeholder="Search vehicles, brands, models…" />
+        <button class="search-close-btn" id="searchClose" aria-label="Close search">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-bg-overlay"></div>
+    <img
+      src="pexels-crz-2158032520-35113538.jpg"
+      onerror="this.src='https://images.pexels.com/photos/35113538/pexels-photo-35113538.jpeg?_gl=1*10objdq*_ga*MTE1MTYwMDI1OS4xNzc1MDk4Nzgz*_ga_8JE65Q40S6*czE3ODE1MTQ0MDgkbzE3JGcxJHQxNzgxNTE0NjYwJGo1NyRsMCRoMA..'"
+      alt="Luxury Hero Car"
+      class="hero-bg-img"
+    />
+
+    <div class="hero-inner">
+      <!-- Left copy -->
+      <div class="hero-copy rjn-reveal">
+        <p class="hero-eyebrow">EST. 2018 &nbsp;·&nbsp; LUXURY AUTOMOTIVE</p>
+        <h1 class="hero-title">Instant<br>Luxury.<br>Zero Hassle.</h1>
+        <p class="hero-desc">
+          Access an elite, unlisted inventory of the world's most exclusive hypercars.
+          Buy completely online — secure, white-glove delivery to your driveway.
+        </p>
+        <div class="hero-actions">
+          <a href="#inventory" class="rjn-btn-primary">Browse Inventory <i class="bi bi-arrow-right ms-1"></i></a>
+          <a href="#" class="hero-link-secondary">Learn more <i class="bi bi-chevron-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Right metrics -->
+      <div class="hero-metrics rjn-reveal rjn-reveal-d2">
+        <div class="metric-card">
+          <div class="metric-icon"><i class="bi bi-car-front-fill"></i></div>
+          <div>
+            <div class="metric-val">
+              <span class="metric-num" data-target="800">0</span><span class="metric-sfx">+</span>
+            </div>
+            <div class="metric-lbl">Cars Sold</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="bi bi-currency-dollar"></i></div>
+          <div>
+            <div class="metric-val">
+              <span class="metric-pfx">$</span><span class="metric-num" data-target="80">0</span><span class="metric-sfx">M+</span>
+            </div>
+            <div class="metric-lbl">Sales Volume</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon"><i class="bi bi-star-fill"></i></div>
+          <div>
+            <div class="metric-val">
+              <span class="metric-num" data-target="99">0</span><span class="metric-sfx">%</span>
+            </div>
+            <div class="metric-lbl">Positive Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ BLOG — Carousel ══ -->
+  <section class="rjn-blog-section">
+    <div class="container-fluid px-4 px-lg-5">
+
+      <div class="blog-header rjn-reveal">
+        <div>
+          <span class="section-eyebrow">LATEST NEWS</span>
+          <h2 class="section-title mt-2">From the Paddock</h2>
+        </div>
+        <a href="#" class="rjn-btn-ghost">View all articles <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+
+      <div class="blog-carousel-wrap rjn-reveal rjn-reveal-d1">
+        <!-- Prev / Next -->
+        <button class="carousel-nav prev" id="blogPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+        <button class="carousel-nav next" id="blogNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+
+        <div class="blog-track-outer">
+          <div class="blog-track" id="blogTrack">
+
+            <article class="blog-card">
+              <div class="blog-img-wrap">
+                <img src="image/pexels-julio-barrera-55956183-9399193.jpg"
+                  onerror="this.src=''"
+                  alt="Lamborghini Urus Performante" class="blog-img" />
+                <span class="blog-tag">News</span>
+              </div>
+              <div class="blog-body">
+                <time class="blog-date" datetime="2026-05-12">May 12, 2026</time>
+                <h3 class="blog-title">The New Lamborghini Urus Performante Has Arrived, And It's Everything We Hoped For</h3>
+                <a href="#" class="blog-read-link">Read article <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-img-wrap">
+                <img src="image/pexels-bank-3846205.jpg"
+                  onerror="this.src=''"
+                  alt="Electric Revolution" class="blog-img" />
+                <span class="blog-tag">Technology</span>
+              </div>
+              <div class="blog-body">
+                <time class="blog-date" datetime="2026-05-28">May 28, 2026</time>
+                <h3 class="blog-title">Inside the All-Electric Revolution: How Hypercar Brands Are Evolving</h3>
+                <a href="#" class="blog-read-link">Read article <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-img-wrap">
+                <img src="image/pexels-soscenic-photography-101600519-10343809.jpg"
+                  onerror="this.src=''"
+                  alt="Luxury Consignment" class="blog-img" />
+                <span class="blog-tag">Market</span>
+              </div>
+              <div class="blog-body">
+                <time class="blog-date" datetime="2026-06-04">June 4, 2026</time>
+                <h3 class="blog-title">Mastering the Market: Why Luxury Vehicle Consignment is Booming This Quarter</h3>
+                <a href="#" class="blog-read-link">Read article <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-img-wrap">
+                <img src="image/pexels-gustavo-guedes-1718294014-27951446.jpg"
+                  onerror="this.src=''"
+                  alt="Luxury Consignment" class="blog-img" />
+                <span class="blog-tag">Market</span>
+              </div>
+              <div class="blog-body">
+                <time class="blog-date" datetime="2026-06-04">June 10, 2026</time>
+                <h3 class="blog-title">Mastering the Market: Why Luxury Vehicle Consignment is Booming This Quarter</h3>
+                <a href="#" class="blog-read-link">Read article <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="blog-dots" id="blogDots">
+          <button class="blog-dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="blog-dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="blog-dot" data-index="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ INVENTORY ══ -->
+  <section id="inventory" class="rjn-inventory-section">
+    <div class="container-fluid px-4 px-lg-5">
+
+      <div class="inv-header rjn-reveal">
+        <div class="inv-header-left">
+          <span class="section-eyebrow">VERIFIED VEHICLES</span>
+          <h2 class="section-title mt-2">Inspect,<br>Click,<br>Delivered.</h2>
+        </div>
+        <div class="inv-header-right">
+          <a href="#" class="rjn-btn-primary">Browse All <i class="bi bi-arrow-right ms-1"></i></a>
+          <p class="inv-desc">Every vehicle passes a rigorous 150-point inspection by certified technicians. Shop with complete confidence from anywhere.</p>
+        </div>
+      </div>
+
+      <div class="inv-grid" id="inventoryGrid">
+
+              <!-- Card 1: Lamborghini Revuelto -->
+              <div class="inventory-card rjn-reveal rjn-reveal-d1">
+                <div class="inv-img-wrap">
+                  <img src="image/pexels-vaibhav-lokhande-509081422-16170477.jpg"
+                    onerror="this.src='https://unsplash.com'"
+                    alt="Lamborghini Revuelto" class="inv-img" />
+                  <!-- CHANGED TO SHOPPING CART LAYOUT -->
+                  <a href="#" class="inv-arrow" aria-label="Add Lamborghini Revuelto to Cart"><i class="bi bi-cart3"></i></a>
+                </div>
+                <div class="inv-body">
+                  <div class="inv-row-top">
+                    <div>
+                      <p class="inv-make">Lamborghini</p>
+                      <p class="inv-model">Revuelto</p>
+                    </div>
+                    <span class="inv-tag tag-new">Hybrid Hypercar</span>
+                  </div>
+                  <div class="inv-row-bottom">
+                    <p class="inv-year">2026</p>
+                    <p class="inv-price">₱38,500,000</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Rolls-Royce Spectre -->
+              <div class="inventory-card rjn-reveal rjn-reveal-d2">
+                <div class="inv-img-wrap">
+                  <img src="image/pexels-svjae-3764984.jpg"
+                    onerror="this.src='https://unsplash.com'"
+                    alt="Rolls-Royce Spectre" class="inv-img" />
+                  <!-- CHANGED TO SHOPPING CART LAYOUT -->
+                  <a href="#" class="inv-arrow" aria-label="Add Rolls-Royce Spectre to Cart"><i class="bi bi-cart3"></i></a>
+                </div>
+                <div class="inv-body">
+                  <div class="inv-row-top">
+                    <div>
+                      <p class="inv-make">Rolls-Royce</p>
+                      <p class="inv-model">Spectre</p>
+                    </div>
+                    <span class="inv-tag tag-cpo">Pure Luxury EV</span>
+                  </div>
+                  <div class="inv-row-bottom">
+                    <p class="inv-year">2026</p>
+                    <p class="inv-price">₱42,200,000</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Ferrari SF90 Stradale -->
+              <div class="inventory-card rjn-reveal rjn-reveal-d3">
+                <div class="inv-img-wrap">
+                  <img src="image/pexels-introspectivedsgn-12801149.jpg"
+                    onerror="this.src='https://unsplash.com'"
+                    alt="Ferrari SF90 Stradale" class="inv-img" />
+                  <!-- CHANGED TO SHOPPING CART LAYOUT -->
+                  <a href="#" class="inv-arrow" aria-label="Add Ferrari SF90 Stradale to Cart"><i class="bi bi-cart3"></i></a>
+                </div>
+                <div class="inv-body">
+                  <div class="inv-row-top">
+                    <div>
+                      <p class="inv-make">Ferrari</p>
+                      <p class="inv-model">SF90 Stradale</p>
+                    </div>
+                    <span class="inv-tag tag-hybrid">Certified Pre-Owned</span>
+                  </div>
+                  <div class="inv-row-bottom">
+                    <p class="inv-year">2025</p>
+                    <p class="inv-price">₱32,800,000</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Porsche 718 Cayman GT4 RS -->
+              <div class="inventory-card rjn-reveal rjn-reveal-d4">
+                <div class="inv-img-wrap">
+                  <img src="image/pexels-porsche.jpg"
+                    onerror="this.src='https://unsplash.com'"
+                    alt="Porsche 718 Cayman GT4 RS" class="inv-img" />
+                  <!-- CHANGED TO SHOPPING CART LAYOUT -->
+                  <a href="#" class="inv-arrow" aria-label="Add Porsche GT4 RS to Cart"><i class="bi bi-cart3"></i></a>
+                </div>
+                <div class="inv-body">
+                  <div class="inv-row-top">
+                    <div>
+                      <p class="inv-make">Porsche</p>
+                      <p class="inv-model">GT4 RS</p>
+                    </div>
+                    <span class="inv-tag tag-new">Track Ready</span>
+                  </div>
+                  <div class="inv-row-bottom">
+                    <p class="inv-year">2025</p>
+                    <p class="inv-price">₱11,450,000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+ 
+  <!-- ══ FOOTER ══ -->
+  <footer class="rjn-footer">
+    <div class="footer-cta-row">
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="row align-items-start gy-5">
+
+          <div class="col-12 col-lg-5 rjn-reveal">
+            <h2 class="footer-cta-title">Ready to own<br>your dream car?</h2>
+            <p class="footer-cta-desc">
+              Access verified inventories from the nation's premier luxury dealer network.
+              Secure financing and complete your vehicle acquisition completely online.
+            </p>
+            <div class="footer-actions">
+              <a href="#" class="rjn-btn-primary">Start Buying <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="#" class="footer-icon-btn" aria-label="Location"><i class="bi bi-geo-alt-fill"></i></a>
+              <a href="https://instagram.com" 
+                 class="footer-icon-btn" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 aria-label="Follow RJN Automotive on Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5 offset-lg-2 rjn-reveal rjn-reveal-d2">
+            <div class="footer-links-grid">
+              <a href="#" class="footer-link-pill">Home</a>
+              <a href="#" class="footer-link-pill">About</a>
+              <a href="#" class="footer-link-pill">Shop</a>
+              <a href="#" class="footer-link-pill">Blog</a>
+              <a href="#" class="footer-link-pill">Trade-In</a>
+              <a href="#" class="footer-link-pill">Financing</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container-fluid px-4 px-lg-5">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">© 2026 RJN AUTOMOTIVE GROUP — ALL RIGHTS RESERVED</p>
+          <div class="footer-policies">
+            <a href="#">Terms &amp; Conditions</a>
+            <span class="sep">|</span>
+            <a href="#">Privacy Policy</a>
+            <span class="sep">|</span>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
